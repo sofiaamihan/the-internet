@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
-# TODO - complex authentication with error checks, locking outs, etc
+# TODO - complex authentication with error checks, locking outs, etc, through forms as well
 
 class TestBasicAuth:
 
