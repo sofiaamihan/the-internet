@@ -19,7 +19,13 @@ class TestAddRemoveElements:
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/")
         add_locator = driver.find_element(By.XPATH, "//div[@class='example']/button")
         add_locator.click()
+
+        # V1 - Original Code, Asserts True
         element_locator = driver.find_element(By.XPATH, "//div[@id='elements']/button")
         element_locator.click()
         wait = WebDriverWait(driver, 10)
         assert wait.until(ec.invisibility_of_element_located((By.XPATH, "//div[@id='elements']/button")))
+
+        # V2 - Asserts False, Test Allure Report Screenshot on failure
+        # element_locator = driver.find_elements(By.XPATH, "//div[@id='elements']/button")
+        # assert len(element_locator) == 2
