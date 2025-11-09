@@ -1,0 +1,2 @@
+Iteration 3: Number of elements = 5
+Elements: ['Home', 'About', 'Contact Us', 'Portfolio', 'Gallery']
