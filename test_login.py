@@ -30,10 +30,10 @@ class TestLogin:
 
         logout_button = driver.find_element(By.XPATH, "//a[@class='button secondary radius']")
         logout_button.click()
-        success_alert = wait.until(ec.presence_of_element_located((By.XPATH, "//div[@id='flash']")))
-        assert success_alert.text.split('\n')[0] == "You logged out of the secure area!"
-        assert success_alert.is_displayed()
-        assert driver.current_url == "https://the-internet.herokuapp.com/login"
+        if wait.until(ec.visibility_of_element_located((By.XPATH, "//div[contains(text(), 'You logged out of the secure area!')]"))):
+            success_alert = wait.until(ec.presence_of_element_located((By.XPATH, "//div[@id='flash']")))
+            assert success_alert.is_displayed()
+            assert driver.current_url == "https://the-internet.herokuapp.com/login"
 
     @pytest.mark.login
     @pytest.mark.parametrize("username, password, id", [

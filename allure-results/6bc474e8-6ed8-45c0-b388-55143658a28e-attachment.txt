@@ -1,0 +1,1 @@
+Javascript Error: {'level': 'SEVERE', 'message': "https://the-internet.herokuapp.com/javascript_error 6:51 Uncaught TypeError: Cannot read properties of undefined (reading 'xyz')", 'source': 'javascript', 'timestamp': 1762851181690}
