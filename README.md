@@ -25,4 +25,4 @@ allure serve allure-results
 ```
 
 ## Results
-![Results]()
+![Results](https://github.com/sofiaamihan/the-internet/blob/main/data/results.png)
