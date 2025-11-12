@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 import pytest
 
-
 class TestCheckboxes:
 
     @pytest.mark.checkboxes
@@ -11,7 +10,6 @@ class TestCheckboxes:
         checkboxes[0].click()
         assert checkboxes[0].is_selected()
         assert checkboxes[1].is_selected()
-        # assert [True if checkboxes[1].is_selected() == False else False]
 
     @pytest.mark.checkboxes
     def test_second_checkbox(self, driver):

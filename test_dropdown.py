@@ -2,8 +2,6 @@ import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-# TODO - calendar widget selection?
-
 class TestDropdown:
 
     @pytest.mark.dropdown

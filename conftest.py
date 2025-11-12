@@ -4,7 +4,6 @@ import allure
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    # This hook is called after each test phase (setup, call, teardown)
     outcome = yield
     result = outcome.get_result()
 

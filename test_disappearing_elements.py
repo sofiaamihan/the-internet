@@ -3,8 +3,6 @@ from selenium.webdriver.common.by import By
 import allure
 import pytest
 
-# TODO - elements that appear on a screen for a fixed amount of time, check that too
-
 class TestDisappearingElements:
 
     @pytest.mark.elements
