@@ -1,10 +1,7 @@
 import time
-
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 import pytest
-
-# TODO - wtf is the ultimate diff between viewport, displayed, and visibility
 
 def is_in_viewport(driver, element):
     return driver.execute_script("""

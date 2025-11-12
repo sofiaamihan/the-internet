@@ -1,16 +1,10 @@
 import os
 import time
-
 import pytest
 from selenium.webdriver.support import expected_conditions as ec
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-
-# TODO - what about multiple files?
-# TODO - what if i have to create a file in my code then upload it?
-# TODO - some drag and drops have hidden inputs, this one doesnt and is not supported by selenium
-# TODO - configure all driver settings in the conftest file instead
 
 class TestUploadingAndDownloading:
 

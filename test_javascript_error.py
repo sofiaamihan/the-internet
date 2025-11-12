@@ -1,8 +1,6 @@
 import pytest
 import allure
 
-# TODO - what are the different kinds of entry levels???
-
 class TestJavascriptError:
 
     @pytest.mark.error

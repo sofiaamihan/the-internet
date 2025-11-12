@@ -5,8 +5,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 import pytest
 
-# TODO - other than allowing locations, what if there are permissions that require microphone, etc
-
 class TestGeolocation:
 
     @pytest.mark.geo

@@ -3,8 +3,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 import pytest
 
-# TODO - I know that javascript prompts only allow one input but how would i handle a different kind of alert with multiple inputs? (if a thing)
-
 class TestJavascriptAlerts:
 
     @pytest.mark.alerts
