@@ -3,9 +3,6 @@ import pytest
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
-# TODO - the checkbox was originally on top of the button, is there a way to check that the order of elements has changed
-# TODO - also this page in general is kind of weird for the checkbox divs to keep loading.. didn't test that
-
 class TestDynamicControls:
 
     @pytest.mark.dynamic

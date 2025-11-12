@@ -4,10 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 import pytest
 
-# TODO - visibility keeps showing true even if it isnt there. is visibiliy the view port or the entire page height or what deems it not visible
-# TODO - incremental scroll height checks, so for every scroll check that the height has increased as well
-# TODO - maybe i could also check that there is new and different content generating each time
-
 def is_in_viewport(driver, element):
     return driver.execute_script("""
         const rect = arguments[0].getBoundingClientRect();
