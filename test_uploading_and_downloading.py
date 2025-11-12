@@ -38,7 +38,7 @@ class TestUploadingAndDownloading:
         driver = webdriver.Chrome(options=options)
         driver.get("https://the-internet.herokuapp.com/download")
 
-        link = driver.find_element(By.XPATH, "//a[contains(text(), 'ZZZ.txt')]")
+        link = driver.find_element(By.XPATH, "//a[contains(text(), 'sample.txt')]")
         filename = link.text
         link.click()
 

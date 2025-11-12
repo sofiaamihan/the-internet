@@ -23,7 +23,7 @@ class TestSecureFileDownload:
         driver = webdriver.Chrome(options=options)
         driver.get("https://admin:admin@the-internet.herokuapp.com/download_secure")
 
-        link = driver.find_element(By.XPATH, "//a[contains(text(), 'large-test-file.txt')]")
+        link = driver.find_element(By.XPATH, "//a[contains(text(), 'test.txt')]")
         filename = link.text
         link.click()
 
