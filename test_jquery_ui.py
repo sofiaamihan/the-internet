@@ -1,6 +1,5 @@
 import time
 import pytest
-from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -10,19 +9,7 @@ import os
 class TestJQueryUI:
 
     @pytest.mark.jquery
-    def test_jquery_ui(self):
-
-        download_dir = "/Users/sofiaamihan/Downloads"
-        if not os.path.exists(download_dir):
-            os.makedirs(download_dir)
-
-        options = webdriver.ChromeOptions()
-        options.add_experimental_option("prefs", {
-            "download.default_directory": download_dir,
-            "download.prompt_for_download": False,
-            "safebrowsing.enabled": True
-        })
-        driver = webdriver.Chrome(options=options)
+    def test_jquery_ui(self, driver):
 
         driver.get("https://the-internet.herokuapp.com/jqueryui")
 
@@ -51,7 +38,5 @@ class TestJQueryUI:
         while timeout > 0 and not os.path.exists(file_path):
             time.sleep(1)
             timeout -= 1
-
-        driver.quit()
 
         assert os.path.isfile(file_path), f"File was not downloaded: {file_path}"
