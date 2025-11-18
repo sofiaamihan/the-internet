@@ -1,6 +1,7 @@
 import os.path
 import pytest
-from selenium import webdriver
+# from selenium import webdriver
+from seleniumwire import webdriver # Allow Logging
 import allure
 
 @pytest.hookimpl(hookwrapper=True)
@@ -17,6 +18,7 @@ def pytest_runtest_makereport(item, call):
                 attachment_type=allure.attachment_type.PNG
             )
 
+@allure.title("Setting up Directory")
 @pytest.fixture()
 def download_dir():
     path = "/Users/sofiaamihan/Downloads"
