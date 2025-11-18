@@ -1,7 +1,7 @@
 import os.path
 import pytest
 # from selenium import webdriver
-from seleniumwire import webdriver # Allow Logging
+from seleniumwire import webdriver # Allow Logging, but removes security
 import allure
 
 @pytest.hookimpl(hookwrapper=True)
