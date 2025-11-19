@@ -1,7 +1,11 @@
 import time
+import allure
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 import pytest
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.expected_conditions import visibility_of_element_located
+
 
 def is_in_viewport(driver, element):
     return driver.execute_script("""
@@ -10,7 +14,7 @@ def is_in_viewport(driver, element):
             rect.top >= 0 &&
             rect.left >= 0 &&
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom <= (window.innerWidth || document.documentElement.clientWidth) 
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth) 
         );
     """, element)
 
@@ -36,8 +40,10 @@ class TestFloatingMenu:
 
         # Title should not be visible
         assert not is_in_viewport(driver, title)
+        assert ec.invisibility_of_element_located((By.TAG_NAME, "h3"))
         # assert not title.is_displayed() --> This does not work
 
         # Floating Menu should be visible
         assert floating_menu.is_displayed()
-        # assert is_in_viewport(driver, floating_menu) --> This does not work
+        assert visibility_of_element_located((By.XPATH, "//div[@id='menu']"))
+        # assert is_in_viewport(driver, floating_menu) # --> This does not work
