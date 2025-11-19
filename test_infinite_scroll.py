@@ -1,4 +1,5 @@
 import time
+import allure
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
@@ -45,6 +46,12 @@ class TestInfiniteScroll:
 
         # Scroll height should have increased
         new_height = driver.execute_script("return document.body.scrollHeight")
+
+        allure.attach(
+            f"Original Height: {initial_height}\nCurrent Height: {new_height}",
+            name="Height Difference",
+            attachment_type=allure.attachment_type.TEXT
+        )
         assert initial_height < new_height
 
 
