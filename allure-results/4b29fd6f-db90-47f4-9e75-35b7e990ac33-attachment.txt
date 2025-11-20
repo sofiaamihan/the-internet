@@ -1,1 +1,0 @@
-Colour of element: rgba(218, 75, 75, 1)

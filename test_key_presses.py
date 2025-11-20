@@ -1,5 +1,4 @@
 import sys
-
 from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 import pytest
@@ -46,14 +45,6 @@ class TestKeyPresses:
 
         results = driver.find_element(By.XPATH, "//input[@id='target']").get_attribute("value")
         assert results == "hihi"
-
-    def test_forward_backward(self, driver):
-        driver.get("https://the-internet.herokuapp.com/inputs")
-        driver.get("https://the-internet.herokuapp.com/key_presses")
-
-        actions = ActionChains(driver)
-        assert len(driver.window_handles) == 2
-
 
     @pytest.mark.keys
     def test_number_keys(self, driver):

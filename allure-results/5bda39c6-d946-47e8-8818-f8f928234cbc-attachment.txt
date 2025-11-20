@@ -1,1 +1,0 @@
-Colour of element: rgba(0, 0, 0, 1)

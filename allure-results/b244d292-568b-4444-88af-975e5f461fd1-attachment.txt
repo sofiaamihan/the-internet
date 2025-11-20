@@ -1,2 +1,0 @@
-Iteration 2: Number of elements = 4
-Elements: ['Home', 'About', 'Contact Us', 'Portfolio']

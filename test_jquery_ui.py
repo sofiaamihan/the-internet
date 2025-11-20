@@ -13,7 +13,7 @@ class TestJQueryUI:
 
         driver.get("https://the-internet.herokuapp.com/jqueryui")
 
-        link = driver.find_elements(By.XPATH, "//a")[2]
+        link = driver.find_element(By.XPATH, "//a[contains(text(), 'Menu')]")
         link.click()
 
         assert driver.current_url == "https://the-internet.herokuapp.com/jqueryui/menu"

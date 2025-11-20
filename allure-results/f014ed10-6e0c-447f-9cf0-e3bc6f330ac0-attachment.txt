@@ -1,2 +1,0 @@
-URL: https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp
- CODE: 200

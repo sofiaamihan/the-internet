@@ -1,0 +1,2 @@
+URL: https://safebrowsingohttpgateway.googleapis.com/v1/ohttp/hpkekeyconfig?key=AIzaSyDr2UxVnv_U85AbhhY8XSHSIavUW0DC-sY
+CODE: 200
